@@ -56,12 +56,12 @@ try {
 ```
 ```
 int rowCount = pst.executeUpdate();
-			dispatcher = request.getRequestDispatcher("registration.jsp");
-			if (rowCount > 0) {
-				request.setAttribute("status", "success");
+dispatcher = request.getRequestDispatcher("registration.jsp");
+if (rowCount > 0) {
+request.setAttribute("status", "success");
 				
-			} else {
-				request.setAttribute("status", "failed");
-			}
-			dispatcher.forward(request, response);
+} else {
+request.setAttribute("status", "failed");
+}
+dispatcher.forward(request, response);
 ```
