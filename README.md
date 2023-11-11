@@ -54,7 +54,7 @@ try {
 			pst.setString(3, uemail);
 			pst.setString(4, umobile);
 ```
-create a mechanism to take some action whether data has has been submitted successfully or not.
+create a mechanism to set the status of whether data has been submitted successfully or not.
 ```
 int rowCount = pst.executeUpdate();
 dispatcher = request.getRequestDispatcher("registration.jsp");
@@ -65,4 +65,15 @@ if (rowCount > 0) {
 	request.setAttribute("status", "failed");
 }
 dispatcher.forward(request, response);
+```
+back to the registration page, create a hidden button that will announce when registration success
+```
+<script type="text/javascript">
+
+	var status = document.getElementById("status").value;
+	if(status == "success"){
+		swal("Congrat", "Account Created Successfully", "success");
+	}
+
+</script>
 ```
