@@ -158,3 +158,11 @@ buttons or links for logout in index.jsp
 <li class="nav-item mx-0 mx-lg-1 bg-danger"><a
     class="nav-link py-3 px-0 px-lg-3 rounded" href="logout"><%=session.getAttribute("name") %></a></li>
 ```
+terminate the session and send a redirect to login.jsp
+```
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		response.sendRedirect("login.jsp");
+	}
+```
