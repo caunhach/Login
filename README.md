@@ -117,7 +117,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 		HttpSession session = request.getSession();
 		RequestDispatcher dispatcher = null;
 ```
-connect MySQL, and execute a select query from a users table and insert the login data to it.
+connect MySQL, and execute a select query from a users table and insert the login data to it. store the result in rs. then find another row in rs(matching in the database). if yes go to index.jsp, other wise go to login.jsp.
 ```
 try {
 			Class.forName("com.mysql.jdbc.Driver");
