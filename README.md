@@ -43,7 +43,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 		RequestDispatcher dispatcher = null;
 		Connection con = null;
 ```
-connect to the database with Connection.
+use Connection object which is associated with database connectivity to communicate with mysql.
 ```
 try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
