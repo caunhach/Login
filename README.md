@@ -12,3 +12,11 @@ go to the deployment descriptor which is named web.xml and change the implemente
   </welcome-file-list>
 </web-app>
 ```
+So, if the users are new or haven't logged in yet. we will send them to the login page with this code in index.jsp.
+```
+<%
+	if(session.getAttribute("name")==null){
+		response.sendRedirect("login.jsp");
+	}
+%>
+```
