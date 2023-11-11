@@ -80,3 +80,4 @@ back to the registration page, create a hidden button that will announce when re
 
 </script>
 ```
+## Step3 : Manage login Page.
