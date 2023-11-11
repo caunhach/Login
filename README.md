@@ -54,6 +54,7 @@ try {
 			pst.setString(3, uemail);
 			pst.setString(4, umobile);
 ```
+create a mechanism to take some action whether data has has been submitted successfully or not.
 ```
 int rowCount = pst.executeUpdate();
 dispatcher = request.getRequestDispatcher("registration.jsp");
