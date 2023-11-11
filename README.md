@@ -5,7 +5,7 @@ This project is about practicing how to create servlets and connect each web pag
 <strong>important components: </strong><br>
 - <strong>Server Container : Apache-Tomcat</strong> - A server container is a lightweight, standalone, and executable software package that includes everything needed to run a piece of software
 - <strong>Deployment Descriptor : web.xml</strong> -  it is a deployment descriptor file used in Java web applications. It is an XML file that provides configuration information for the web components that comprise a web application. The web.xml file is typically located in the WEB-INF directory of a web application.
-- <strong>Servlets : java files</strong> - Servlets are Java classes that extend the capabilities of servers to handle requests and responses. They are part of the Java Platform, Enterprise Edition (Java EE), which is now known as Jakarta EE. Servlets are primarily used to create web applications, and they operate at the server-side to generate dynamic web content, process user input, and manage state.
+- <strong>Servlets : java files (login.java, logout.java, RegristrationServlet.java)</strong> - Servlets are Java classes that extend the capabilities of servers to handle requests and responses. They are part of the Java Platform, Enterprise Edition (Java EE), which is now known as Jakarta EE. Servlets are primarily used to create web applications, and they operate at the server-side to generate dynamic web content, process user input, and manage state.
 ## Step1 : Set the welcome page.
 go to the deployment descriptor which is named <strong>web.xml</strong> and change the implemented code as follows. this will make <strong>index.jsp</strong> the first page (if users have logged in)
 ```
