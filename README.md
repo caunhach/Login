@@ -28,3 +28,8 @@ So, if the users are new or haven't logged in yet. we will send them to the logi
 	}
 %>
 ```
+## Step2 : Manage Registration Page.
+In registration.jsp, set the method="post" and action="register"
+```
+<form method="post" action="register" class="register-form" id="register-form">
+```
