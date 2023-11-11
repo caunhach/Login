@@ -117,3 +117,22 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 		HttpSession session = request.getSession();
 		RequestDispatcher dispatcher = null;
 ```
+connect MySQL, and execute a select query from a users table and insert the login data to it.
+```
+try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/youtube?useSSL=false", "root", "");
+			PreparedStatement pst = con.prepareStatement("select * from users where uemail = ? and upwd = ?");
+			pst.setString(1, uemail);
+			pst.setString(2, upwd);
+			
+			ResultSet rs = pst.executeQuery();
+			if (rs.next()) {
+				session.setAttribute("name", rs.getString("uname"));
+				dispatcher = request.getRequestDispatcher("index.jsp");
+			}else {
+				request.setAttribute("status", "failed");
+				dispatcher = request.getRequestDispatcher("login.jsp");
+			}
+			dispatcher.forward(request, response);
+```
