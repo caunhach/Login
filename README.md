@@ -33,7 +33,7 @@ In registration.jsp, set the method="post" and action="register". post is the me
 ```
 <form method="post" action="register" class="register-form" id="register-form">
 ```
-create a new servlet name RegistrationServlet.java and delete all except the doPost method.
+create a new servlet name RegistrationServlet.java and delete all except the doPost method. the code below, we set the local string to store value from a submitted form.
 ```
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String uname = request.getParameter("name");
