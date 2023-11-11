@@ -68,6 +68,9 @@ dispatcher.forward(request, response);
 ```
 back to the registration page, create a hidden button that will announce when registration success
 ```
+<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+```
+```
 <script type="text/javascript">
 
 	var status = document.getElementById("status").value;
