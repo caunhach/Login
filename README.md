@@ -43,3 +43,14 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 		RequestDispatcher dispatcher = null;
 		Connection con = null;
 ```
+connect to the database with Connection.
+```
+try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/youtube", "root", "");
+			PreparedStatement pst = con.prepareStatement("insert into users(uname, upwd, uemail, umobile) values(?,?,?,?) ");
+			pst.setString(1, uname);
+			pst.setString(2, upwd);
+			pst.setString(3, uemail);
+			pst.setString(4, umobile);
+```
