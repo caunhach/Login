@@ -136,3 +136,17 @@ try {
 			}
 			dispatcher.forward(request, response);
 ```
+back to the login page, create a hidden button that will announce when login fails
+```
+<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+```
+```
+<script type="text/javascript">
+
+	var status = document.getElementById("status").value;
+	if(status == "failed"){
+		swal("Sorry", "Wrong Username or Password", "error");
+	}
+
+</script>
+```
