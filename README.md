@@ -108,3 +108,12 @@ id="login-form">
 	</div>
 </form>
 ```
+create a new servlet name login.java and delete all except the doPost method. the code below, we set the local string to store value from a login form.
+```
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String uemail =request.getParameter("username");
+		String upwd =request.getParameter("password");
+		HttpSession session = request.getSession();
+		RequestDispatcher dispatcher = null;
+```
