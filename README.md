@@ -54,7 +54,7 @@ try {
 			pst.setString(3, uemail);
 			pst.setString(4, umobile);
 ```
-create a mechanism to set the status of whether data has been submitted successfully or not.
+update database, if at least one row has been changed, set the status to be success.
 ```
 int rowCount = pst.executeUpdate();
 dispatcher = request.getRequestDispatcher("registration.jsp");
