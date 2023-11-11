@@ -150,3 +150,4 @@ back to the login page, create a hidden button that will announce when login fai
 
 </script>
 ```
+## Step4 : Manage Logout Page.
