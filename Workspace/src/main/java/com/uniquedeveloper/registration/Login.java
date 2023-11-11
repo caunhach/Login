@@ -21,8 +21,7 @@ import javax.servlet.http.HttpSession;
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String uemail =request.getParameter("username");
 		String upwd =request.getParameter("password");
@@ -35,7 +34,6 @@ public class Login extends HttpServlet {
 			PreparedStatement pst = con.prepareStatement("select * from users where uemail = ? and upwd = ?");
 			pst.setString(1, uemail);
 			pst.setString(2, upwd);
-			pst.setString(1, uemail);
 			
 			ResultSet rs = pst.executeQuery();
 			if (rs.next()) {
@@ -50,6 +48,5 @@ public class Login extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
+}
 }

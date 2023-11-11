@@ -20,26 +20,18 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/register")
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		String uname = request.getParameter("name");
 		String uemail = request.getParameter("email");
 		String upwd = request.getParameter("pass");
 		String umobile = request.getParameter("contact");
-		
-//		PrintWriter out = response.getWriter();
-//		out.print(uname);
-//		out.print(uemail);
-//		out.print(upwd);
-//		out.print(umobile);
 		RequestDispatcher dispatcher = null;
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/youtube?useSSL=false", "root", "");
-			PreparedStatement pst = con
-					.prepareStatement("insert into users(uname, upwd, uemail, umobile) values(?,?,?,?) ");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/youtube", "root", "");
+			PreparedStatement pst = con.prepareStatement("insert into users(uname, upwd, uemail, umobile) values(?,?,?,?) ");
 			pst.setString(1, uname);
 			pst.setString(2, upwd);
 			pst.setString(3, uemail);
@@ -49,13 +41,14 @@ public class RegistrationServlet extends HttpServlet {
 			dispatcher = request.getRequestDispatcher("registration.jsp");
 			if (rowCount > 0) {
 				request.setAttribute("status", "success");
-			}else {
+				
+			} else {
 				request.setAttribute("status", "failed");
 			}
 			dispatcher.forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			try {
 				con.close();
 			} catch (SQLException e) {
@@ -63,5 +56,4 @@ public class RegistrationServlet extends HttpServlet {
 			}
 		}
 	}
-
 }
