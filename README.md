@@ -3,7 +3,7 @@ This project is about practicing how to create servlets and connect each web pag
 ## Brief.
 ![Architecture](https://github.com/caunhach/SignUp/blob/main/arch.png)<br>
 <strong>important components: </strong><br>
-- Server Container : Apache-Tomcat - A server container typically refers to a lightweight, standalone, and executable software package that includes everything needed to run a piece of software
+- <strong>Server Container : Apache-Tomcat</strong> - A server container is a lightweight, standalone, and executable software package that includes everything needed to run a piece of software
 ## Step1 : Set the welcome page.
 go to the deployment descriptor which is named <strong>web.xml</strong> and change the implemented code as follows. this will make <strong>index.jsp</strong> the first page (if users have logged in)
 ```
