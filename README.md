@@ -54,3 +54,14 @@ try {
 			pst.setString(3, uemail);
 			pst.setString(4, umobile);
 ```
+```
+int rowCount = pst.executeUpdate();
+			dispatcher = request.getRequestDispatcher("registration.jsp");
+			if (rowCount > 0) {
+				request.setAttribute("status", "success");
+				
+			} else {
+				request.setAttribute("status", "failed");
+			}
+			dispatcher.forward(request, response);
+```
