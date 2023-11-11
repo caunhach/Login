@@ -29,7 +29,7 @@ So, if the users are new or haven't logged in yet. we will send them to the logi
 %>
 ```
 ## Step2 : Manage Registration Page.
-In registration.jsp, set the method="post" and action="register"
+In registration.jsp, set the method="post" and action="register". post is the method to request a web server accept and store the data enclosed in the body of the request message. and the value in action is the servelet where the data will be sent to.
 ```
 <form method="post" action="register" class="register-form" id="register-form">
 ```
