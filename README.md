@@ -2,7 +2,7 @@
 This project is about practicing how to create servlets and connect each web page with servlets. We have 3 pages are login page, a registration page, and an index page(which shows when u can log in with the correct username and password). The steps below are the brief guides.
 ## Brief.
 There is something you need to know before starts - architecture.
-![Architecture](https://github.com/caunhach/BattleShip/blob/main/played_example.png)
+![Architecture]([https://github.com/caunhach/SignUp/blob/main/arch.png])
 ## Step1 : Set the welcome page.
 go to the deployment descriptor which is named <strong>web.xml</strong> and change the implemented code as follows. this will make <strong>index.jsp</strong> the first page (if users have logged in)
 ```
